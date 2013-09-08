@@ -6,34 +6,48 @@ A ready to go setup for running your Buildbox Agent on Heroku
 
 Create a git repository locally
 
-    $ git init
+```bash
+$ git init
+```
 
 Clone the `buildbox-heroku` repo into your local repo
 
-    $ git remote add origin https://github.com/buildboxhq/buildbox-heroku.git
-    $ git pull
+```bash
+$ git remote add origin https://github.com/buildboxhq/buildbox-heroku.git
+$ git pull
+```
 
 Create an application on Heroku
 
-    $ heroku apps:create [name]
+```bash
+$ heroku apps:create [name]
+```
 
 Setup you Buildbox Credentials on Heroku
 
-    $ heroku config:set BUILDBOX_AGENTS=[agent token] BUILDBOX_API_KEY=[your api key]
+```bash
+$ heroku config:set BUILDBOX_AGENTS=[agent token] BUILDBOX_API_KEY=[your api key]
+```
 
 Create a PostgreSQL Database (optional)
 
-    $ heroku addons:add heroku-postgresql:dev
-    $ heroku config | grep HEROKU_POSTGRESQL # Look for the color that Heroku chose for the database
-    $ heroku pg:promote HEROKU_POSTGRESQL_RED_URL
+```bash
+$ heroku addons:add heroku-postgresql:dev
+$ heroku config | grep HEROKU_POSTGRESQL # Look for the color that Heroku chose for the database
+$ heroku pg:promote HEROKU_POSTGRESQL_RED_URL
+```
 
 Deploy the code to Heroku
 
-    $ git push heroku master
+```bash
+$ git push heroku master
+```
 
 Scale up the Buildbox Agent process
 
-    $ heroku ps:scale buildbox=1
+```bash
+$ heroku ps:scale buildbox=1
+```
 
 That's it! If you `heroku logs --tail` you should be able to see your Buildbox Agent connecting and looking for builds.
 
