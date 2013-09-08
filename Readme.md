@@ -10,7 +10,7 @@ Create a git repository locally
 
 Clone the `buildbox-heroku` repo into your local repo
 
-    $ git remote add origin git@github.com:buildboxhq/buildbox-heroku.git
+    $ git remote add origin https://github.com/buildboxhq/buildbox-heroku.git
     $ git pull
 
 Create an application on Heroku
@@ -24,6 +24,8 @@ Setup you Buildbox Credentials on Heroku
 Create a PostgreSQL Database (optional)
 
     $ heroku addons:add heroku-postgresql:dev
+    $ heroku config | grep HEROKU_POSTGRESQL # Look for the color that Heroku chose for the database
+    $ heroku pg:promote HEROKU_POSTGRESQL_RED_URL
 
 Deploy the code to Heroku
 
