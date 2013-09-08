@@ -1,8 +1,14 @@
 # Buildbox Heroku
 
-A ready to go setup for running your Buildbox Agent on Heroku
+A ready to go setup for running your Buildbox Agent on Heroku.
 
-## Installation
+## What you need
+
+1. A Buildbox Account
+2. A new Buildbox Agent ready to setup, and it's access token
+3. Your Buildbox API key
+
+## Setup
 
 Create a git repository locally
 
