@@ -6,7 +6,6 @@ A ready to go setup for running your Buildbox Agent on Heroku.
 
 1. A Buildbox Account
 2. A new Buildbox Agent ready to setup, and it's access token
-3. Your Buildbox API key
 
 ## Setup
 
@@ -32,7 +31,7 @@ $ heroku apps:create [name]
 Setup you Buildbox Credentials on Heroku
 
 ```bash
-$ heroku config:set BUILDBOX_AGENTS=[agent token] BUILDBOX_API_KEY=[your api key]
+$ heroku config:set BUILDBOX_AGENTS=[agent token]
 ```
 
 Create a PostgreSQL Database (optional)
