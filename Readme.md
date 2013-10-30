@@ -60,11 +60,22 @@ That's it! If you `heroku logs --tail` you should be able to see your Buildbox A
 
 Add multi buildback to enable both npm and Gem 
 
-````bash
+```bash
 $ heroku config:add BUILDPACK_URL=https://github.com/ddollar/heroku-buildpack-multi.git
 ```
 
 The default package.json include npm, grunt and grunt-cli. 
+
+Update your build scrit to use npm and grunt: 
+```bash
+#... checkout & co
+
+npm install
+
+grunt 
+
+#... deploy & co
+```
 
 ## Contributing
 
