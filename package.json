@@ -5,6 +5,7 @@
   }, 
   "dependencies": {
     "npm": "~1.3.2",
+    "bower": "~0.8.0",
     "grunt": "~0.4.0", 
     "grunt-cli": "~0.1.0"
   }
